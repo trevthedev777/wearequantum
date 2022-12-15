@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --btn: #ac182d;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    height: 70px;
+    background-color: aqua;
+}
+
+main {
+    height: 80vh;
+}
+
+footer {
+    background-color: black;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
