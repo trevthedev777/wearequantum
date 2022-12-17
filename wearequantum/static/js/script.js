@@ -1,5 +1,7 @@
 const modal = document.getElementById("myModal");
-const form = document.querySelector('form')
+const form = document.querySelector('form');
+const loading = document.getElementById("loading");
+const btnSubmit = document.getElementById('btnSubmit');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -24,9 +26,13 @@ function onlyNumbers(e) {
     paragraph.innerHTML = 'Invalid Credentials';
     errMsgDiv.append(paragraph);
     e.preventDefault()
-  }
-
+    }  else if (containsNumber = true) {
+        btnSubmit.remove()
+        loading.classList.remove('hide')
+    }
+    
 };
+
 
 // Event Listeners
 form.addEventListener('submit', onlyNumbers)
