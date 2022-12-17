@@ -34,9 +34,9 @@ body {
         /* Sit on top */
         left: 0;
         top: 0;
-        width: 100%;
+        width: 100vw;
         /* Full width */
-        height: 100%;
+        height: 100vh;
         /* Full height */
         overflow: auto;
         /* Enable scroll if needed */
@@ -81,9 +81,23 @@ body {
 }
 
 form input {
-    width: 30px;
+    width: 80px;
+    color: white;
+    font-size: larger;
+    text-align: center;
     margin: 2rem;
     padding: 1rem;
+    background: none;
+    border: none;
+    border-bottom: #ac182d 1px solid;
+    outline: none;
+}
+
+#errorMsg {
+    display: block;
+    color: #ac182d;
+    text-align: center;
+    margin-top: 2REM;
 }
 
 .cookie-policy {
@@ -91,6 +105,10 @@ form input {
     padding: 0 2rem;
     color: #ac182d;
     text-align: center;
+}
+
+.close {
+    display: none;
 }
 
 

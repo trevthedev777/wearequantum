@@ -26,9 +26,7 @@
         ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-        <script type="text/javascript">
-            
-        </script>
+        <script type="text/javascript"></script>
     </head>
     <body>
         {% comment %} Modal Content {% endcomment %}
@@ -36,30 +34,56 @@
             <div class="modal-content">
                 <div class="flex-container">
                     <div>
-                        <img src="{% static 'imgs/Fireball_logo.png' %}" class="logo" alt="fireball logo">
+                        <img
+                            src="{% static 'imgs/Fireball_logo.png' %}"
+                            class="logo"
+                            alt="fireball logo"
+                        />
                         <h1>WOAH THERE!</h1>
                         <p class="info-text">We just need to see something</p>
                     </div>
                     <form action="">
                         {% csrf_token %}
                         <div class="form-flex">
-                            <input type="text" placeholder="DD">
-                            <input type="text" placeholder="MM">
-                            <input type="text" placeholder="YYYY">
+                            <input
+                                class="ageGate"
+                                type="text"
+                                max-length="2"
+                                placeholder="DD"
+                            />
+                            <input
+                                class="ageGate"
+                                type="text"
+                                max-length="2"
+                                placeholder="MM"
+                            />
+                            <input
+                                class="ageGate"
+                                type="text"
+                                max-length="4"
+                                placeholder="YYYY"
+                            />
                         </div>
                         <p class="cookie-policy">
                             <small>
-                                This site uses cookies. Cookie Policy. I agree to the terms of use, and the privacy policy. This information will not be used for marketing purposes
+                                This site uses cookies. Cookie Policy. I agree
+                                to the terms of use, and the privacy policy.
+                                This information will not be used for marketing
+                                purposes
                             </small>
                         </p>
                         <div class="text-center">
-                            <button class="btn" type="submit">
+                            <button id="btnSubmit" class="btn" type="submit">
                                 <p class="btn-text">Enter</p>
                             </button>
                         </div>
+                        <span id="errorMsg"></span>
                     </form>
                     <div>
-                        <img src="{% static 'imgs/Drinkaware_logo.png' %}" alt="Drinkaware Logo">
+                        <img
+                            src="{% static 'imgs/Drinkaware_logo.png' %}"
+                            alt="Drinkaware Logo"
+                        />
                     </div>
                 </div>
             </div>
@@ -90,6 +114,6 @@
         </footer>
 
         {% comment %} JS {% endcomment %}
-        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
     </body>
 </html>
