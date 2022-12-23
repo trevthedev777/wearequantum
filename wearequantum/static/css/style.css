@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 :root {
@@ -130,15 +131,24 @@ header {
 }
 
 main {
-    height: 80vh;
+    width: 100%;
+    height: 120vh;
+    background: url(../imgs/Mountains-Mayrh.png) no-repeat top center;
+    
 }
 
+.fireball-logo {
+    width: 150px;
+    height: 150px;
+}
 footer {
     background-color: black;
-    height: 72px;
+    height: 142px;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(../imgs/Footer-1.png) no-repeat top center;
 }
 
 footer p {

@@ -28,9 +28,9 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
         <script type="text/javascript"></script>
     </head>
-    <body>
+    <body class="container">
         {% comment %} Modal Content {% endcomment %}
-        <div id="modal">
+        {% comment %} <div id="modal">
             <div class="modal-content">
                 <div class="flex-container">
                     <div>
@@ -73,7 +73,7 @@
                                 to the terms of use, and the privacy policy.
                                 This information will not be used for marketing
                                 purposes
-                            </small>
+                            </small> 
                         </p>
                         <div class="text-center">
                             <button id="btnSubmit" class="btn" type="submit">
@@ -95,16 +95,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
         {% comment %} header {% endcomment %}
-        <header>
-            <img src="" alt="" />
-        </header>
 
         {% comment %} Main Conntent {% endcomment %}
-        <main>
-            <div class="row">
-                <div class="text-center">
+        <main >
+            <div class="row container d-flex flex-column">
+                <div class="col-12 align-items-center justify-content-center">
+                    <img src="{% static 'imgs/Fireball_logo.png' %}" class="fireball-logo " alt="fireball-logo">
                     <button
                         id="btnSubmit"
                         type="submit"
@@ -112,13 +110,21 @@
                     >
                         Enter
                     </button>
+                </div
+                
+                    <div class="align-self-end">
+                        <img
+                            src="{% static 'imgs/Drinkaware_logo.png' %}"
+                            alt="Drinkaware Logo"
+                        />
+                    </div>
+                    
                 </div>
             </div>
         </main>
 
         {% comment %} Footer {% endcomment %}
-        <footer>
-            <p>give it an ice cold shot</p>
+        <footer class="container d-flex align-items-center justify-content-center">
         </footer>
 
         {% comment %} JS {% endcomment %}
